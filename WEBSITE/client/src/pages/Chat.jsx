@@ -216,6 +216,8 @@ export default function Chat() {
 
     useEffect(() => {
         const fetchConversationMessage = async () => {
+            console.log("conversation Id change");
+            // this line
             if (!currentConversationId) return;
             try {
                 setFetchLoading(true);

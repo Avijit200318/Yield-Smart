@@ -104,7 +104,7 @@ export default function Diagonasis() {
 
             const data = await res.json();
             if (data.success === false) {
-                console.log(data.message);
+                console.log("Error: ", data.message);
                 setOutputError(true);
                 return;
             }
@@ -114,7 +114,7 @@ export default function Diagonasis() {
             deleteFirebaseImage(imageUrl);
             setFile(null);
         } catch (error) {
-            console.log(error.message);
+            console.log("erorr", error.message);
             setOutputError(true);
         } finally {
             setOutPutLoading(false);

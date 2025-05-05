@@ -2,7 +2,7 @@ import axios from "axios";
 export const imgOutput = async (req, res, next) => {
     try {
 
-        const response = await axios.post("https://yield-smart-agent.onrender.com/image/", {
+        const response = await axios.post("https://yield-smart-agent.onrender.com/v1/image", {
             image: req.body.image
         }, {
             headers: {
